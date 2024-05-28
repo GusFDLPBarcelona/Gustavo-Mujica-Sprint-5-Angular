@@ -1,7 +1,10 @@
-<div *ngFor="let step of steps">
-  <h3>{{ step.title }}</h3>
-  <p>{{ step.description }}</p>
-  <img [src]="step.img" alt="{{ step.title }}">
-  <div [style.background-color]="step.bgcolor" style="height: 10px;"></div>
-  <br>
+<div *ngFor="let step of steps" class="escena-container" [style.background-color]="step.bgcolor">
+  <div class="escena-header">
+    <img [src]="step.img" alt="{{ step.title }}">
+  </div>
+  <div class="escena-body">
+    <h3>{{ step.title }}</h3>
+    <p>{{ step.description }}</p>
+  </div>
 </div>
+
