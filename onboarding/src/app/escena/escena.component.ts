@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-escena',
-  standalone: true,
-  imports: [EscenaComponent],
   templateUrl: './escena.component.html',
-  styleUrls: ['./escena.component.css']
+  styleUrls: ['./escena.component.css'],
+  standalone: true
 })
-export class EscenaComponent {
-  title = 'onboarding';
-}
+export class EscenaComponent { }

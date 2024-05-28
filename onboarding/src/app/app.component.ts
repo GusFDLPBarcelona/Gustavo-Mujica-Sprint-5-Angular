@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component'; 
-import { EscenaComponent } from './escena/escena.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
-  selector: 'app-root', 
-  standalone: true,
-  imports: [HomeComponent, EscenaComponent],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] 
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [HomeComponent]
 })
 export class AppComponent {
-  title = 'onboarding';
+ 
 }
