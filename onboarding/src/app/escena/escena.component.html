@@ -1,2 +1,7 @@
-<h3>Dedica muchas horas</h3>
-<p>Al menos 30 horas a la semana. Si no tienes suficiente, tendrás que dedicarle más horas. Al principio parece imposible, pero notarás una mejoría rápidamente.</p>
+<div *ngFor="let step of steps">
+  <h3>{{ step.title }}</h3>
+  <p>{{ step.description }}</p>
+  <img [src]="step.img" alt="{{ step.title }}">
+  <div [style.background-color]="step.bgcolor" style="height: 10px;"></div>
+  <br>
+</div>

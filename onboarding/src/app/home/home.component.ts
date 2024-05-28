@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EscenaComponent } from '../escena/escena.component';
 import { StepsService } from '../steps.service';
 import { iStep } from '../istep.interface';
-import { EscenaComponent } from '../escena/escena.component';
 
 @Component({
   selector: 'app-home',
