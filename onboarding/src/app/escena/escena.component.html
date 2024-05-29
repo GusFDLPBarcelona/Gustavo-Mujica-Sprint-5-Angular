@@ -1,10 +1,20 @@
-<div *ngFor="let step of steps" class="escena-container" [style.background-color]="step.bgcolor">
+<div class="escena-container" [style.background-color]="steps[currentStepIndex].bgcolor">
   <div class="escena-header">
-    <img [src]="step.img" alt="{{ step.title }}">
+    <img [src]="steps[currentStepIndex].img" alt="{{ steps[currentStepIndex].title }}">
   </div>
   <div class="escena-body">
-    <h3>{{ step.title }}</h3>
-    <p>{{ step.description }}</p>
+    <h3>{{ steps[currentStepIndex].title }}</h3>
+    <p>{{ steps[currentStepIndex].description }}</p>
+  </div>
+  <div class="escena-footer">
+    <button class="nav-button" (click)="previousStep()" [disabled]="currentStepIndex === 0">
+      &#9664;
+    </button>
+    <div class="dot-container">
+      <span *ngFor="let s of steps; let i = index" class="dot" [class.active]="i === currentStepIndex"></span>
+    </div>
+    <button class="nav-button" (click)="nextStep()" [disabled]="currentStepIndex === steps.length - 1">
+      &#9654;
+    </button>
   </div>
 </div>
-
