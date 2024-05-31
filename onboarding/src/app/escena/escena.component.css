@@ -1,6 +1,11 @@
 body {
   background-color: #f5f5f5;
-  align-items: center
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .custom-row {
@@ -13,15 +18,14 @@ body {
 
 .escena-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
 } 
 
 .step-image {
-  margin-top: 45px; /* Ajusta este valor según tus necesidades */
-  margin-left: 4px; /* Ajusta este valor según tus necesidades */
+  margin-top: 45px; 
+  margin-left: 4px; 
 }
 
 .card {
@@ -29,6 +33,14 @@ body {
   width: 300px;
   align-items: center;
   justify-content: center;
+}
+
+.card-header, .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; 
 }
 
 .card .card-header { 
@@ -76,7 +88,7 @@ body {
 .scroll {
   display: flex;
   align-items: center;
-  margin-left: 0px; /* Ajustar margen a la izquierda para que sea igual al margen derecho del botón "adelante" */
+  margin-left: 0px; 
 }
 
 .custom-btn {
@@ -90,9 +102,9 @@ body {
 }
 
 .btn-img {
-  width: 40px; /* Ajusta al tamaño de tus círculos */
-  height: 40px; /* Ajusta al tamaño de tus círculos */
-}
+  width: 40px; 
+  height: 40px;
+} 
 
 button.custom-btn:disabled {
   background-color: grey;
@@ -100,21 +112,13 @@ button.custom-btn:disabled {
 }
 
 .card-header {
-  border-bottom: none; /* Eliminar la línea divisoria */
+  border-bottom: none; 
 }
 
 .card-footer {
-  border-top: none; /* Eliminar la línea divisoria */
-  justify-content: space-between; /* Separar los elementos a los extremos */
+  border-top: none; 
+  justify-content: space-between; 
 }
-
 .d-flex.align-items-center {
-  margin-right: 0px; /* Añadir margen a la derecha */
-}
-
-@media (min-width: 576px) {
-  .col-8 {
-    flex: 0 0 auto;
-    width: auto;
-  }
+  margin-right: 0px; 
 }
