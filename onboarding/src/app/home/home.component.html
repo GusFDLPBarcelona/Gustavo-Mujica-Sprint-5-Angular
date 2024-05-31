@@ -1,8 +1,3 @@
-<app-escena [steps]="steps"></app-escena>
-<div class="controls">
-  <button (click)="previousStep()" [disabled]="currentStepIndex === 0">Anterior</button>
-  <button (click)="nextStep()" [disabled]="currentStepIndex === steps.length - 1">Siguiente</button>
-</div>
-<div class="dot-container">
-  <span *ngFor="let step of steps; let i = index" class="dot" [class.active]="i === currentStepIndex"></span>
+<div class="container">
+  <app-escena></app-escena>
 </div>

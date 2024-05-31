@@ -1,63 +1,120 @@
+body {
+  background-color: #f5f5f5;
+  align-items: center
+}
+
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .escena-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  background-color: var(--bgcolor);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.escena-header {
-  width: 100%;
-  height: 200px;
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--bgcolor);
+  height: 100vh;
+} 
+
+.step-image {
+  margin-top: 45px; /* Ajusta este valor según tus necesidades */
+  margin-left: 4px; /* Ajusta este valor según tus necesidades */
 }
 
-.escena-header img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.escena-body {
-  padding: 20px;
-  text-align: center;
-}
-
-.escena-footer {
-  display: flex;
+.card {
+  border-radius: 10px;
+  width: 300px;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  width: 100%;
+  justify-content: center;
 }
 
-.nav-button {
-  background: none;
-  border: none;
-  font-size: 24px;
+.card .card-header { 
+  height: 300px;
+  align-items: center;
+}
+
+.card .card-body { 
+  height: 210px;
+  align-items: center;
+}
+.card .card-footer {
+  align-items: center;
+  height: 100px; 
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  margin: 5px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.dot-container {
+.ball.active {
+  background-color: rgb(0, 0, 0);
+}
+
+.ball.rounded-pill {
+  border-radius: 50px;
+}
+
+.scroll {
   display: flex;
   align-items: center;
-  gap: 5px;
+  margin-left: 0px; /* Ajustar margen a la izquierda para que sea igual al margen derecho del botón "adelante" */
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
+.custom-btn {
   border-radius: 50%;
-  background-color: #ccc;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
-.dot.active {
-  background-color: #000;
+.btn-img {
+  width: 40px; /* Ajusta al tamaño de tus círculos */
+  height: 40px; /* Ajusta al tamaño de tus círculos */
+}
+
+button.custom-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.card-header {
+  border-bottom: none; /* Eliminar la línea divisoria */
+}
+
+.card-footer {
+  border-top: none; /* Eliminar la línea divisoria */
+  justify-content: space-between; /* Separar los elementos a los extremos */
+}
+
+.d-flex.align-items-center {
+  margin-right: 0px; /* Añadir margen a la derecha */
+}
+
+@media (min-width: 576px) {
+  .col-8 {
+    flex: 0 0 auto;
+    width: auto;
+  }
 }
