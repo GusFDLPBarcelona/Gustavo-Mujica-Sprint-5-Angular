@@ -7,9 +7,9 @@
           <div class="card-header" [ngStyle]="{ 'background-color': steps[currentStepIndex].bgcolor }">
             <img [src]="steps[currentStepIndex].img" alt="{{ steps[currentStepIndex].title }}" class="card-img-top img-fluid" class="card-img-top img-fluid step-image">
           </div>
-          <div class="card-body text-center" style="background-color: white;">
-            <h3>{{ steps[currentStepIndex].title }}</h3>
-            <p>{{ steps[currentStepIndex].description }}</p>
+          <div class="card-body" style="background-color: white;">
+            <p class="card-tittle" style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 10px; margin-bottom: 7px;">{{ steps[currentStepIndex].title }}</p>
+            <p class="card-text">{{ steps[currentStepIndex].description }}</p>
           </div>
           <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: white;">
             <div class="scroll d-flex">
@@ -17,8 +17,8 @@
                 *ngFor="let step of steps; let i = index"
                 class="ball"
                 [ngClass]="{ 'rounded-pill': currentStepIndex === i, active: currentStepIndex === i }"
-                (click)="setCurrentStepTo(i)"
-              ></div>
+                (click)="setCurrentStepTo(i)">
+              </div>
             </div>
             <div class="d-flex align-items-center">
               <button class="custom-btn btn btn-light" (click)="previousStep()" [disabled]="currentStepIndex === 0">

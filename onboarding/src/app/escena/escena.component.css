@@ -30,41 +30,43 @@ body {
 }
 
 .card {
-  border-radius: 50px !important;
-  width: 300px;
+  border-radius: 30px !important;
+  width: 230px;
   align-items: center;
   justify-content: center;
 }
 
-.card-header, .card-body {
+.card-header{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-
-.card-header {
+  border-bottom: none; 
   border-top-right-radius: 30px !important; 
   border-top-left-radius: 30px !important;
 }
 
 .card-footer {
+  border-top: none; 
+  justify-content: space-between;
   border-bottom-right-radius: 30px !important; 
   border-bottom-left-radius: 30px !important;
 }
+
 .card .card-header { 
   height: 300px;
   align-items: center;
 }
 
 .card .card-body { 
-  height: 210px;
-  align-items: center;
+  height: 160px;
+  align-items: center;  
 }
+
 .card .card-footer {
   align-items: center;
-  height: 100px; 
+  height: 60px; 
 }
 
 .card .card-content {
@@ -72,13 +74,23 @@ body {
   flex-direction: column;
 }
 
+.card-body {
+  text-align: left;
+}
+
+
+.card-text {
+  text-align: left;
+  font-size: 12px; 
+}
+
 .shadow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ball {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: grey;
   margin: 5px;
   border-radius: 50%;
@@ -89,7 +101,7 @@ body {
   background-color: rgb(0, 0, 1);
   border-radius: 25px; 
   width: 20px; 
-  height: 10px;
+  height: 8px;
 }
 
 .ball.rounded-pill {
@@ -104,8 +116,8 @@ body {
 
 .custom-btn {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +125,8 @@ body {
 }
 
 .btn-img {
-  width: 40px; 
-  height: 40px;
+  width: 30px; 
+  height: 30px;
 } 
 
 button.custom-btn:disabled {
@@ -122,14 +134,24 @@ button.custom-btn:disabled {
   cursor: not-allowed;
 }
 
-.card-header {
-  border-bottom: none; 
+button.custom-btn:disabled {
+  position: absolute;
+  cursor: not-allowed;
+  right: 5px;
 }
 
-.card-footer {
-  border-top: none; 
-  justify-content: space-between; 
+button.custom-btn:not(:disabled) {
+  margin-right: 5px !important; 
 }
+
+
 .d-flex.align-items-center {
   margin-right: 0px; 
+}
+
+@media (min-width: 768px) { 
+  body {
+    margin: 20px;
+    padding: 20px; 
+  }
 }
