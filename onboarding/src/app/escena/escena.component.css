@@ -34,6 +34,8 @@ body {
   width: 230px;
   align-items: center;
   justify-content: center;
+  border: none;
+
 }
 
 .card-header{
@@ -89,8 +91,8 @@ body {
 }
 
 .ball {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: grey;
   margin: 5px;
   border-radius: 50%;
@@ -101,7 +103,7 @@ body {
   background-color: rgb(0, 0, 1);
   border-radius: 25px; 
   width: 20px; 
-  height: 8px;
+  height: 7px;
 }
 
 .ball.rounded-pill {
