@@ -31,16 +31,16 @@ body {
 
 .card {
   border-radius: 30px !important;
-  width: 230px;
+  width: 100%;
+  max-width: 230px;
   align-items: center;
   justify-content: center;
   border: none;
-
+  box-shadow: opx px 20px rgba(0, 0, 0, 1);
 }
 
-.card-header{
+.card-header{  
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -50,6 +50,7 @@ body {
 }
 
 .card-footer {
+  display: flex;
   border-top: none; 
   justify-content: space-between;
   border-bottom-right-radius: 30px !important; 
@@ -156,4 +157,25 @@ button.custom-btn:not(:disabled) {
     margin: 20px;
     padding: 20px; 
   }
+}
+
+.animation{
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animation-step-0,
+.animation-step-1,
+.animation-step-2 {
+  animation: myAnim 2s ease 0s 1 normal forwards;
 }

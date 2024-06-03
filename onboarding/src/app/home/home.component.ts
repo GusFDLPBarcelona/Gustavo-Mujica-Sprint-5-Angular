@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EscenaComponent } from '../escena/escena.component';
+import { iStep } from '../istep.interface';
+import { StepsService } from '../steps.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,11 @@ import { EscenaComponent } from '../escena/escena.component';
   imports: [EscenaComponent]
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  steps: iStep[] = [];
 
-  ngOnInit(): void {}
+  constructor(private stepsService: StepsService) {}
+
+  ngOnInit(): void {
+    this.steps = this.stepsService.getSteps();
+  }
 }
