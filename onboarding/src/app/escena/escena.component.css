@@ -36,7 +36,7 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
-  box-shadow: opx px 20px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-header{  
@@ -134,13 +134,6 @@ body {
 
 button.custom-btn:disabled {
   visibility: hidden;
-  cursor: not-allowed;
-}
-
-button.custom-btn:disabled {
-  position: absolute;
-  cursor: not-allowed;
-  right: 5px;
 }
 
 button.custom-btn:not(:disabled) {

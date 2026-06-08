@@ -1,22 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { iStep } from '../istep.interface';
 
 @Component({
   selector: 'app-escena',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './escena.component.html',
   styleUrls: ['./escena.component.css']
 })
-export class EscenaComponent implements OnInit {
+export class EscenaComponent {
   @Input() steps: iStep[] = [];
   currentStepIndex: number = 0;
   animate: boolean = true;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   setCurrentStepTo(index: number): void {
     this.triggerAnimation();

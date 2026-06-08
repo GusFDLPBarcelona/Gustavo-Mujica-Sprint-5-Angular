@@ -1,0 +1,16 @@
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 20px;
+    padding: 20px;
+  }
+}
